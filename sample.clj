@@ -28,3 +28,7 @@
       (* (factorial-of (dec number)) number)))
 
 (factorial-of 5)
+
+(def square (comp (partial apply *) (partial repeat 2)))
+
+(square 6)
