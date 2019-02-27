@@ -32,3 +32,26 @@
 (def square (comp (partial apply *) (partial repeat 2)))
 
 (square 6)
+
+;-------------------------------------------------------------------
+
+(def first-and-last (partial (juxt first last)))
+(first-and-last "abcd")
+
+(def first-and-last-equal? (comp (partial apply =)  first-and-last))
+(first-and-last-equal? "abca")
+
+(def middle (comp rest butlast))
+(middle "abcd")
+
+(def times (comp #(quot % 2) (partial count)))
+(times "adff")
+
+
+
+
+
+
+
+
+
